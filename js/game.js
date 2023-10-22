@@ -83,6 +83,32 @@ gameScene.update = function() {
     this.player.x += this.playerSpeed;
   }
 
+  // Collision Detection: Player-Treasure
 
+  if (Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(), this.treasure.getBounds())) {
+    this.gameOver();
+  }
+  // Dragon Movement
 
+  const dragons = this.dragons.getChildren();
+  const numDragons = dragons.length;
+
+  for (let i = 0; i < numDragons; i++) {
+
+    // Move
+    dragons[i].y += dragons[i].speed;
+
+    // Reverse Direction
+    if (dragons[i].y >= this.dragonMaxY && dragons[i].speed > 0) {
+      dragons[i].speed *= -1;
+    } else if (dragons[i].y <= this.dragonMinY && dragons[i].speed < 0) {
+      dragons[i].speed *= -1;
+    }
+
+    // Detect Collision
+    if (Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(), dragons[i].getBounds())) {
+      this.gameOver();
+      break;
+    }
+  }
 };
