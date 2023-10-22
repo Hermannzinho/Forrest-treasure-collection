@@ -121,4 +121,9 @@ gameScene.gameOver = function() {
 
   // Shake Camera
   this.cameras.main.shake(500);
+
+  // Fade
+  this.time.delayedCall(250, function() {
+    this.cameras.main.fade(250);
+  }, [], this);
 }
