@@ -26,4 +26,19 @@ gameScene.preload = function() {
 gameScene.create = function() {
   // Reset FX
   this.cameras.main.resetFX();
+
+  // dimensions
+
+  const gameW = this.sys.game.config.width;
+  const gameH = this.sys.game.config.height;
+
+  // background
+
+  const bg = this.add.sprite(0, 0, "background");
+  bg.setPosition(gameW / 2, gameH / 2);
+
+  // player
+
+  this.player = this.add.sprite(40, gameH / 2, "player");
+  this.player.setScale(0.5);
 };
