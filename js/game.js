@@ -112,3 +112,9 @@ gameScene.update = function() {
     }
   }
 };
+
+// Game Over
+
+gameScene.gameOver = function() {
+
+}
