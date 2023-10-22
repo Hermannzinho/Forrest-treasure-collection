@@ -116,5 +116,9 @@ gameScene.update = function() {
 // Game Over
 
 gameScene.gameOver = function() {
+  // Kill Player
+  this.player.isAlive = false;
 
+  // Shake Camera
+  this.cameras.main.shake(500);
 }
