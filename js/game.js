@@ -126,4 +126,9 @@ gameScene.gameOver = function() {
   this.time.delayedCall(250, function() {
     this.cameras.main.fade(250);
   }, [], this);
+
+  // Restart
+  this.time.delayedCall(500, function() {
+    this.scene.restart();
+  }, [], this);
 }
