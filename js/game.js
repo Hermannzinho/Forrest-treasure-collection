@@ -24,5 +24,6 @@ gameScene.preload = function() {
 // Create
 
 gameScene.create = function() {
-
+  // Reset FX
+  this.cameras.main.resetFX();
 };
