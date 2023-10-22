@@ -71,5 +71,11 @@ gameScene.create = function() {
 // Update
 
 gameScene.update = function() {
+  // Alive Status
+  this.player.isAlive = true;
+
+  if (!this.player.isAlive) {
+    return;
+  }
 
 };
