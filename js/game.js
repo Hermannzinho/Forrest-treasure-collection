@@ -67,3 +67,9 @@ gameScene.create = function() {
     dragon.speed = Math.random() * 2 + 1;
   }, this)
 };
+
+// Update
+
+gameScene.update = function() {
+
+};
