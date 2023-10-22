@@ -77,5 +77,9 @@ gameScene.update = function() {
   if (!this.player.isAlive) {
     return;
   }
+  // Move Player
 
+  if (this.input.activePointer.isDown) {
+    this.player.x += this.playerSpeed;
+  }
 };
