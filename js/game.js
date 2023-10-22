@@ -132,3 +132,15 @@ gameScene.gameOver = function() {
     this.scene.restart();
   }, [], this);
 }
+// Config
+
+const config = {
+  type: Phaser.AUTO,
+  width: 640,
+  height: 360,
+  scene: gameScene
+};
+
+// Game
+
+const game = new Phaser.Game(config);
