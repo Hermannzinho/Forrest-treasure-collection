@@ -83,10 +83,6 @@ gameScene.update = function() {
     this.player.x += this.playerSpeed;
   }
 
-  // Collision Detection: Player-Treasure
 
-  if (Phaser.Geom.Intersects.RectangleToRectangle(this.player.getBounds(), this.treasure.getBounds())) {
-    this.gameOver();
-  }
 
 };
