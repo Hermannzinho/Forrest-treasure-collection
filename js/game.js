@@ -21,3 +21,8 @@ gameScene.preload = function() {
   this.load.image("dragon", "assets/dragon.png");
   this.load.image("treasure", "assets/treasure.png");
 };
+// Create
+
+gameScene.create = function() {
+
+};
