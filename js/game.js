@@ -12,3 +12,12 @@ gameScene.init = function() {
   this.dragonMaxY = 280;
   this.dragonMinY = 80;
 };
+
+// Preload
+
+gameScene.preload = function() {
+  this.load.image("background", "assets/background.png");
+  this.load.image("player", "assets/player.png");
+  this.load.image("dragon", "assets/dragon.png");
+  this.load.image("treasure", "assets/treasure.png");
+};
