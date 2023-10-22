@@ -41,4 +41,23 @@ gameScene.create = function() {
 
   this.player = this.add.sprite(40, gameH / 2, "player");
   this.player.setScale(0.5);
+
+  // Treasure
+
+  this.treasure = this.add.sprite(gameW - 80, gameH / 2, "treasure");
+  this.treasure.setScale(0.6);
+
+  // dragons
+
+  this.dragons = this.add.group({
+    key: 'dragon',
+    repeat: 5,
+    setXY: {
+      x: 110,
+      y: 100,
+      stepX: 80,
+      stepY: 20
+    }
+  });
+  Phaser.Actions.ScaleXY(this.dragons.getChildren(), -.5, -.5);
 };
