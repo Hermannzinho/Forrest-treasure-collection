@@ -60,4 +60,10 @@ gameScene.create = function() {
     }
   });
   Phaser.Actions.ScaleXY(this.dragons.getChildren(), -.5, -.5);
+
+  // set speed
+
+  Phaser.Actions.Call(this.dragons.getChildren(), function(dragon) {
+    dragon.speed = Math.random() * 2 + 1;
+  }, this)
 };
