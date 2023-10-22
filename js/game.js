@@ -64,7 +64,8 @@ gameScene.create = function() {
   // set speed
 
   Phaser.Actions.Call(this.dragons.getChildren(), function(dragon) {
-    dragon.speed = Math.random() * 2 + 1;
+    dragon.speed = Math.random() * 1 + 0.5;
+
   }, this)
 };
 
