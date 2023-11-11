@@ -18,8 +18,8 @@ gameScene.init = function() {
 gameScene.preload = function() {
   this.load.image("background", "assets/background.png");
   this.load.image("player", "assets/player.png");
-  this.load.image("dragon", "assets/dragon.png");
-  this.load.image("treasure", "assets/treasure.png");
+  this.load.image("dragon", "assets/redDragon.png");
+  this.load.image("treasure", "assets/treasureChest.png");
 };
 // Create
 
