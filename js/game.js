@@ -51,11 +51,11 @@ gameScene.create = function() {
 
   this.dragons = this.add.group({
     key: 'dragon',
-    repeat: 5,
+    repeat: 3,
     setXY: {
       x: 110,
       y: 100,
-      stepX: 80,
+      stepX: 120,
       stepY: 20
     }
   });
